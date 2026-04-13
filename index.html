@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Abid Hossain Khan | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #38bdf8;
+            --bg: #ffffff;
+            --text-main: #0f172a;
+            --text-dim: #64748b;
+            --border: #e2e8f0;
+            --code-bg: #f8fafc;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            background-color: #f8fafc;
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 40px 20px;
+        }
+
+        .action-bar {
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            background-color: var(--text-main);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover { background-color: #1e293b; transform: translateY(-1px); }
+        .btn-outline { background-color: white; color: var(--text-main); border: 1px solid var(--border); }
+
+        .slide {
+            width: 100%;
+            max-width: 1000px;
+            min-height: 600px;
+            background-color: var(--bg);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            padding: 60px;
+            border: 1px solid var(--border);
+            page-break-after: always;
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--primary); font-weight: 500; text-transform: uppercase; }
+        h1 { font-size: 42px; font-weight: 700; color: #0f172a; letter-spacing: -1px; margin: 10px 0 20px 0; }
+        h2.section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-dim); border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 30px; width: 100%; }
+        h3 { font-size: 20px; margin-bottom: 10px; color: #1e293b; }
+        p { font-size: 17px; color: var(--text-dim); line-height: 1.6; }
+
+        .grid-half { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+        .tech-card { background: var(--code-bg); border: 1px solid var(--border); padding: 20px; border-radius: 6px; }
+        .tech-card h4 { font-family: 'JetBrains Mono', monospace; font-size: 14px; margin-bottom: 8px; }
+        
+        .code-block {
+            font-family: 'JetBrains Mono', monospace;
+            background: #0f172a;
+            color: #f1f5f9;
+            padding: 24px;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        ul { list-style: none; margin-top: 10px; }
+        li { position: relative; padding-left: 20px; margin-bottom: 8px; font-size: 15px; color: var(--text-main); }
+        li::before { content: '•'; position: absolute; left: 0; color: var(--primary); }
+
+        .footer { margin-top: auto; display: flex; justify-content: space-between; font-size: 10px; color: var(--text-dim); padding-top: 40px; border-top: 1px solid #f1f5f9; }
+
+        @media print {
+            .action-bar { display: none; }
+            body { padding: 0; background: white; }
+            .slide { border: none; width: 100%; height: 100vh; padding: 40px; margin: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .grid-half, .grid-3 { grid-template-columns: 1fr; }
+            .slide { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="action-bar">
+    <button class="btn" onclick="window.print()">
+        <i class="fa-solid fa-file-pdf"></i> Save as PDF
+    </button>
+    <a href="https://www.linkedin.com/in/md-abid-hossain-khan-ahk" target="_blank" class="btn btn-outline">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+    </a>
+</div>
+
+<section class="slide">
+    <div class="mono">01 // Profile</div>
+    <h1>Md. Abid Hossain Khan</h1>
+    <p style="max-width: 700px; margin-bottom: 40px;">Operations & Data Professional with 8+ years of expertise. I bridge the gap between complex raw data lakes and actionable business intelligence for senior leadership.</p>
+    
+    <div class="grid-3">
+        <div class="tech-card">
+            <h4>Data Architecture</h4>
+            <p>Advanced SQL (SSMS), Python (Pandas), and Excel VBA workflows.</p>
+        </div>
+        <div class="tech-card">
+            <h4>Operational Strategy</h4>
+            <p>Translating technical insights into performance-to-pay incentive models.</p>
+        </div>
+        <div class="tech-card">
+            <h4>Process Automation</h4>
+            <p>Optimizing data cycles by 40% while maintaining 95%+ accuracy.</p>
+        </div>
+    </div>
+    <div class="footer"><span>Fintech & Tobacco Specialist</span><span>Dhaka, Bangladesh</span></div>
+</section>
+
+<section class="slide">
+    <div class="mono">02 // BAT Bangladesh</div>
+    <h2 class="section-label">National Automation Lifecycle</h2>
+    <div class="grid-half">
+        <div>
+            <h3>Trade Marketing Automation</h3>
+            <p style="font-size: 15px;">Managed Phase 1 & 2 of the MM Management rollout across Dhaka, CTG, and Sylhet.</p>
+            <ul>
+                <li>End-to-end data cleansing for thousands of national records.</li>
+                <li>Direct coordination with technical vendors for system stability.</li>
+                <li>Transformed legacy manual processes into automated ecosystems.</li>
+            </ul>
+        </div>
+        <div class="code-block">
+            <span style="color: #64748b;">// Project: CM Live / MS Live</span><br>
+            <span style="color: #38bdf8;">const</span> scale = <span style="color: #38bdf8;">"National"</span>;<br>
+            <span style="color: #38bdf8;">const</span> status = <span style="color: #38bdf8;">"Deployed"</span>;<br>
+            <span style="color: #38bdf8;">const</span> efficiency = <span style="color: #38bdf8;">"Enhanced"</span>;
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <div class="mono">03 // Fintech Operations</div>
+    <h2 class="section-label">bKash & Nagad Impact</h2>
+    <div class="grid-half">
+        <div class="tech-card">
+            <h4>bKash Ltd</h4>
+            <li style="font-size: 13px;">Architected data integrity for KA & MDT modalities.</li>
+            <li style="font-size: 13px;">Functional Analyst for national leadership reporting.</li>
+        </div>
+        <div class="tech-card">
+            <h4>Nagad Ltd</h4>
+            <li style="font-size: 13px;">Regional target modeling for Pulse app launch.</li>
+            <li style="font-size: 13px;">Predictive ACV modeling for field force tracking.</li>
+        </div>
+    </div>
+    <div class="tech-card" style="margin-top: 30px; background: #f1f5f9; border-style: dashed;">
+        <p><strong>Key Result:</strong> Automation of reporting pipelines has consistently recovered ~16 hours/week of manual processing time.</p>
+    </div>
+</section>
+
+<section class="slide" style="justify-content: center; align-items: center; text-align: center;">
+    <div class="mono">04 // Technical Toolkit</div>
+    <div class="grid-3" style="width: 100%; margin-top: 40px;">
+        <div class="tech-card"><h4>SQL Server</h4><p>Advanced Querying & Extraction.</p></div>
+        <div class="tech-card"><h4>Analytics</h4><p>Power BI, Tableau, VBA.</p></div>
+        <div class="tech-card"><h4>Python</h4><p>Data Automation & Cleaning.</p></div>
+    </div>
+    <div class="code-block" style="margin-top: 40px; text-align: left; width: 100%;">
+        <span style="color: #64748b;"># Career Logic</span><br>
+        <span style="color: #38bdf8;">def</span> evaluate_growth():<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;identify_bottleneck()<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;engineer_solution()<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #38bdf8;">return</span> business_excellence
+    </div>
+</section>
+
+<section class="slide" style="justify-content: center; align-items: center; text-align: center;">
+    <div class="mono">05 // Contact</div>
+    <h1>Get in Touch</h1>
+    <p>khan.abid.hossain.bd@gmail.com</p>
+    <p style="margin-top: 5px;">+880 1314 182288</p>
+    <div style="margin-top: 40px;">
+        <a href="https://www.linkedin.com/in/md-abid-hossain-khan-ahk" style="color: var(--primary); text-decoration: none; font-size: 14px;">LinkedIn Profile</a>
+    </div>
+</section>
+
+</body>
+</html>
